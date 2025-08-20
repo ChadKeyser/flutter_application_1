@@ -202,15 +202,10 @@ class _App1PageState extends State<App1Page> {
                         Expanded(
                           child: OutlinedButton(
                             onPressed: () => _onPressed('⌫'),
-                            style: OutlinedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                            ),
                             child: Icon(
                               Icons.backspace,
-                              size: isNarrow ? 20 : 24,
-                            ),
+                              size: 24,
+                            ), // Use Flutter's built-in icon
                           ),
                         ),
                       ],
