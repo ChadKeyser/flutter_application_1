@@ -21,36 +21,27 @@ class HomePage extends StatelessWidget {
         mainAxisSpacing: 24,
         children: [
           AppBlock(
-            title: 'App 1',
-            icon: Icons.apps,
+            title: 'Calculator',
+            icon: Icons.calculate,
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const App1Page()),
             ),
           ),
           AppBlock(
-            title: 'App 2',
-            icon: Icons.star,
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const App2Page()),
-            ),
+            title: 'In Progress',
+            icon: Icons.construction,
+            onTap: () {}, // No navigation
           ),
           AppBlock(
-            title: 'App 3',
-            icon: Icons.settings,
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const App3Page()),
-            ),
+            title: 'In Progress',
+            icon: Icons.construction,
+            onTap: () {}, // No navigation
           ),
           AppBlock(
-            title: 'App 4',
-            icon: Icons.info,
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const App4Page()),
-            ),
+            title: 'In Progress',
+            icon: Icons.construction,
+            onTap: () {}, // No navigation
           ),
         ],
       ),
