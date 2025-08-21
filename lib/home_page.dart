@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'app1_page.dart';
-import 'app2_page.dart';
-import 'app3_page.dart';
-import 'app4_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,36 +11,43 @@ class HomePage extends StatelessWidget {
         title: const Text('App Launcher'),
         backgroundColor: Colors.green,
       ),
-      body: GridView.count(
-        crossAxisCount: 2,
-        padding: const EdgeInsets.all(24),
-        crossAxisSpacing: 24,
-        mainAxisSpacing: 24,
-        children: [
-          AppBlock(
-            title: 'Calculator',
-            icon: Icons.calculate,
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const App1Page()),
-            ),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: 400, // restricts width for desktop, feels like mobile
           ),
-          AppBlock(
-            title: 'In Progress',
-            icon: Icons.construction,
-            onTap: () {}, // No navigation
+          child: GridView.count(
+            crossAxisCount: 2,
+            padding: const EdgeInsets.all(24),
+            crossAxisSpacing: 24,
+            mainAxisSpacing: 24,
+            children: [
+              AppBlock(
+                title: 'Calculator',
+                icon: Icons.calculate,
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const App1Page()),
+                ),
+              ),
+              AppBlock(
+                title: 'In Progress',
+                icon: Icons.construction,
+                onTap: () {}, // No navigation
+              ),
+              AppBlock(
+                title: 'In Progress',
+                icon: Icons.construction,
+                onTap: () {}, // No navigation
+              ),
+              AppBlock(
+                title: 'In Progress',
+                icon: Icons.construction,
+                onTap: () {}, // No navigation
+              ),
+            ],
           ),
-          AppBlock(
-            title: 'In Progress',
-            icon: Icons.construction,
-            onTap: () {}, // No navigation
-          ),
-          AppBlock(
-            title: 'In Progress',
-            icon: Icons.construction,
-            onTap: () {}, // No navigation
-          ),
-        ],
+        ),
       ),
     );
   }
